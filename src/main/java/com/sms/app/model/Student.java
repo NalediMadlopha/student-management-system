@@ -19,7 +19,7 @@ public class Student {
                     @Parameter(name = StudentIdGenerator.VALUE_PREFIX_PARAMETER, value = "Stu"),
                     @Parameter(name = StudentIdGenerator.NUMBER_FORMAT_PARAMETER, value = "%07d")
             })
-    private String studentNumber;
+    private String STUDENT_NUMBER;
     @Column(name = "first_name", nullable = false)
     private String firstName;
     @Column(name = "last_name", nullable = false)
@@ -30,8 +30,8 @@ public class Student {
     public Student() {
     }
 
-    public Student(String studentNumber, String firstName, String lastName, String email) {
-        this.studentNumber = studentNumber;
+    public Student(String STUDENT_NUMBER, String firstName, String lastName, String email) {
+        this.STUDENT_NUMBER = STUDENT_NUMBER;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

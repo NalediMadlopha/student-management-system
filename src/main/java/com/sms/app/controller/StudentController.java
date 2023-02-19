@@ -25,9 +25,9 @@ public class StudentController {
         return new ResponseEntity<>(studentService.saveStudent(student), HttpStatus.CREATED);
     }
 
-    @PutMapping("{studentNumber}")
-    public ResponseEntity<Student> updateStudent(@PathVariable("studentNumber") String studentNumber, @RequestBody Student student) {
-        return new ResponseEntity<>(studentService.updateStudent(studentNumber, student), HttpStatus.CREATED);
+    @PutMapping("{STUDENT_NUMBER}")
+    public ResponseEntity<Student> updateStudent(@PathVariable("STUDENT_NUMBER") String STUDENT_NUMBER, @RequestBody Student student) {
+        return new ResponseEntity<>(studentService.updateStudent(STUDENT_NUMBER, student), HttpStatus.CREATED);
     }
 
     @GetMapping
@@ -35,14 +35,14 @@ public class StudentController {
         return studentService.getAllStudents();
     }
 
-    @GetMapping("{studentNumber}")
-    public ResponseEntity<Student> getStudentById(@PathVariable("studentNumber") String studentNumber) {
-        return new ResponseEntity<>(studentService.getStudentById(studentNumber), HttpStatus.OK);
+    @GetMapping("{STUDENT_NUMBER}")
+    public ResponseEntity<Student> getStudentById(@PathVariable("STUDENT_NUMBER") String STUDENT_NUMBER) {
+        return new ResponseEntity<>(studentService.getStudentById(STUDENT_NUMBER), HttpStatus.OK);
     }
 
-    @DeleteMapping("{studentNumber}")
-    public ResponseEntity<String> deleteStudent(@PathVariable("studentNumber") String studentNumber) {
-        studentService.deleteStudent(studentNumber);
+    @DeleteMapping("{STUDENT_NUMBER}")
+    public ResponseEntity<String> deleteStudent(@PathVariable("STUDENT_NUMBER") String STUDENT_NUMBER) {
+        studentService.deleteStudent(STUDENT_NUMBER);
         return new ResponseEntity<>("Student deleted successfully", HttpStatus.OK);
     }
 

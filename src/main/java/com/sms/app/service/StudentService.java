@@ -8,12 +8,12 @@ public interface StudentService {
 
     Student saveStudent(Student student);
 
-    Student updateStudent(String studentNumber, Student student);
+    Student updateStudent(String STUDENT_NUMBER, Student student);
 
     List<Student> getAllStudents();
 
-    Student getStudentById(String studentNumber);
+    Student getStudentById(String STUDENT_NUMBER);
 
-    void deleteStudent(String studentNumber);
+    void deleteStudent(String STUDENT_NUMBER);
 
 }

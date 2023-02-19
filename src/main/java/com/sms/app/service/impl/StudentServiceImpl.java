@@ -25,9 +25,9 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student updateStudent(String studentNumber, Student student) {
-        Student existingStudent = studentRepository.findById(studentNumber)
-                .orElseThrow(() -> new ResourceNotFoundException("Student", "studentNumber", studentNumber));
+    public Student updateStudent(String STUDENT_NUMBER, Student student) {
+        Student existingStudent = studentRepository.findById(STUDENT_NUMBER)
+                .orElseThrow(() -> new ResourceNotFoundException("Student", "STUDENT_NUMBER", STUDENT_NUMBER));
 
         existingStudent.setFirstName(student.getFirstName());
         existingStudent.setLastName(student.getLastName());
@@ -42,15 +42,15 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student getStudentById(String studentNumber) {
-        return studentRepository.findById(studentNumber)
-                .orElseThrow(() -> new ResourceNotFoundException("Student", "studentNumber", studentNumber));
+    public Student getStudentById(String STUDENT_NUMBER) {
+        return studentRepository.findById(STUDENT_NUMBER)
+                .orElseThrow(() -> new ResourceNotFoundException("Student", "STUDENT_NUMBER", STUDENT_NUMBER));
     }
 
     @Override
-    public void deleteStudent(String studentNumber) {
-        Student existingStudent = studentRepository.findById(studentNumber)
-                .orElseThrow(() -> new ResourceNotFoundException("Student", "studentNumber", studentNumber));
+    public void deleteStudent(String STUDENT_NUMBER) {
+        Student existingStudent = studentRepository.findById(STUDENT_NUMBER)
+                .orElseThrow(() -> new ResourceNotFoundException("Student", "STUDENT_NUMBER", STUDENT_NUMBER));
         studentRepository.delete(existingStudent);
     }
 
