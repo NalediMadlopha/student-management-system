@@ -16,9 +16,8 @@ import static org.mockito.MockitoAnnotations.openMocks;
 
 class StudentServiceImplTest {
 
-    private StudentServiceImpl studentService;
-
     private final static String STUDENT_NUMBER = "stu1234567";
+    private StudentServiceImpl studentService;
 
     @Mock
     private StudentRepository mockStudentRepository;
