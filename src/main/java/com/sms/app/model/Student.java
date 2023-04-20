@@ -30,8 +30,8 @@ public class Student {
     public Student() {
     }
 
-    public Student(String STUDENT_NUMBER, String firstName, String lastName, String email) {
-        this.STUDENT_NUMBER = STUDENT_NUMBER;
+    public Student(String studentNumber, String firstName, String lastName, String email) {
+        this.STUDENT_NUMBER = studentNumber;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
